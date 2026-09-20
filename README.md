@@ -1,5 +1,5 @@
 <div align="center">
-<img src="https://raw.githubusercontent.com/cat-milk/Anime-Girls-Holding-Programming-Books/refs/heads/master/Linux/Sakurajima_Mai_Linux_Essentials.jpg" alt="ryo_arch" width="800" style="object-fit: cover; object-position: center;"><br>
+<img src="./cat.jpg" width="500" style="object-fit: cover; object-position: center;"><br>
 My personal dotfiles for Arch Linux with Hyprland.
 </div>
 
