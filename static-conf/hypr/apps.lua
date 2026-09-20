@@ -1,4 +1,5 @@
 -- Set programs that you use
 terminal    = "kitty"
-fileManager = "dolphin"
-menu        = "hyprlauncher"
+fileManager = "yazi"
+menu        = "rofi -show drun"
+ide         = "code"
