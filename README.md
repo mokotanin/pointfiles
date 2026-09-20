@@ -12,7 +12,7 @@ My personal dotfiles for Arch Linux with Hyprland.
 
 ### Themes
 Every theme uses the shell script [switcher](./themes/switcher) to switch between the themes. The script will symlink the files from the theme folder to your `~/.config` folder, overwriting the static configs if they are present in the theme folder.
-> [!DANGER]
+> [!WARNING]
 > If you want to change more files with the theme, add them in both (or more) theme folders. Otherwise, the script will break the files and mess with the application.
 
 ### Custom apps
