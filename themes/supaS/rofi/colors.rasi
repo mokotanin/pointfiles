@@ -1,0 +1,22 @@
+* {
+  /* main bg */
+  bg0     : #eff1f5;
+  /* search bar bg */
+  bg1     : rgba(204, 208, 218, 0.5);
+  /* selected bg */
+  bg2     : #bcc0cc;
+  /* main border */
+  bg3     : #191919;
+  /* apps */
+  fg0     : #6c6f85;
+  red     : #d20f39;
+  green   : #40a02b;
+  yellow  : #df8e1d;
+  /* apps:*/
+  blue    : #4c4f69;
+  /* search prompt */
+  cyan    : #5c5f77;
+
+  accent: @red;
+  urgent: @yellow;
+}

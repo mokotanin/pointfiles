@@ -1,0 +1,16 @@
+window#osd {
+    padding: 12px 24px;
+    border-radius: 10px;
+
+    background:
+        linear-gradient(#1e1e2e, #181825) padding-box;
+}
+
+#container {
+    margin: 5px;
+}
+
+image, label {
+    color: #cdd6f4;
+    font-family: "BIZ UDPGothic", sans-serif;
+}

@@ -33,11 +33,12 @@ if [[ $# -ne 1 ]]; then
 fi
 
 THEME="$1"
+
 THEME_DIR="$THEMES_DIR/$THEME"
 
 [[ -d "$THEME_DIR" ]] || die "Theme '$THEME' does not exist"
 
-echo "Switching theme to: $THEME"
+echo "switching theme to: $THEME"
 
 # Current theme
 ln -sfn "$THEME_DIR" "$CURRENT"
@@ -71,7 +72,7 @@ done
 # Reload Hyprland
 if command -v hyprctl >/dev/null 2>&1; then
     hyprctl reload >/dev/null 2>&1 || true
-    echo "  ✓ Hyprland reloaded"
+    echo "  ✓ hyprland reloaded"
 fi
 
 # Reload Hyprpaperr
@@ -79,7 +80,7 @@ if command -v hyprpaper >/dev/null 2>&1; then
     pkill -x hyprpaper 2>/dev/null || true
     sleep 0.2
     hyprpaper >/dev/null 2>&1 & disown
-    echo "  ✓ Hyprpaper reloaded"
+    echo "  ✓ hyprpaper reloaded"
 fi
 
 # Restart Waybar
@@ -87,8 +88,41 @@ if command -v waybar >/dev/null 2>&1; then
     pkill -x waybar 2>/dev/null || true
     sleep 0.2
     waybar >/dev/null 2>&1 & disown
-    echo "  ✓ Waybar restarted"
+    echo "  ✓ waybar restarted"
 fi
 
-echo
-echo "Theme switched to '$THEME'."
+# Reload wal according to the selected theme
+
+WAL_THEME=$THEME
+
+if [ "$WAL_THEME" = "supaS" ]; then
+    wal --theme "$WAL_THEME" -l >/dev/null 2>&1
+else
+    wal --theme "$WAL_THEME" >/dev/null 2>&1
+fi
+
+echo "  ✓ wal reloaded with theme '$WAL_THEME'"
+
+/home/nino-nakano/Projets/pywalium/generate.sh >/dev/null 2>&1
+echo "  ✓ chrome theme refreshed"
+
+
+# Get Chromium's current workspace
+
+CHROME_WS=$(hyprctl clients -j | jq -r '
+    .[] | select(.class == "chromium") | .workspace.id
+' | head -n1)
+
+if ! pgrep -x "chromium" >/dev/null 2>&1; then
+    echo "  ✓ chromium is not running, skipping restart"
+    echo "theme switched to '$THEME'."
+    exit 0
+else
+    # Restart Chromium
+    pkill -x chromium 2>/dev/null || true
+    hyprctl dispatch 'hl.dsp.exec_cmd("chromium --force-device-scale-factor:0.8", { workspace = "'$CHROME_WS' silent" })' >/dev/null 2>&1
+    echo "  ✓ chromium restarted on workspace $CHROME_WS"
+fi
+
+
+echo "theme switched to '$THEME'."

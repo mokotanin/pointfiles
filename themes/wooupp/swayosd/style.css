@@ -1,0 +1,14 @@
+window#osd {
+    padding: 12px 24px;
+    border-radius: 16px;       /* Des bords arrondis, mais pas une pilule complète */
+    border: 2px solid #6272a4;  /* Une fine bordure de couleur */
+    background: rgba(40, 42, 54, 0.9); /* Fond sombre transparent (RGBA) */
+}
+
+#container {
+    margin: 8px;
+}
+
+image, label {
+    color: #f8f8f2;             /* Couleur de l'icône de cadenas et du texte */
+}
