@@ -1,7 +1,10 @@
-# dotfiles
+<div align="center">
+<img src="https://raw.githubusercontent.com/cat-milk/Anime-Girls-Holding-Programming-Books/refs/heads/master/Linux/Sakurajima_Mai_Linux_Essentials.jpg" alt="ryo_arch" width="800" style="object-fit: cover; object-position: center;"><br>
 My personal dotfiles for Arch Linux with Hyprland.
+</div>
 
-<img src="https://raw.githubusercontent.com/cat-milk/Anime-Girls-Holding-Programming-Books/refs/heads/master/Linux/Ryo_Yamada_Reading_ArchLinux_Book.jpg" alt="ryo_arch" width="300" height="300" style="object-fit: cover; object-position: center;">
+# .
+
 
 ## Explanation
 ### Static configs
@@ -18,3 +21,5 @@ All credit goes to the original authors of the applications, I just compiled the
 
 
 In order: [Waybar-Module-Pomodoro](https://github.com/Andeskjerf/waybar-module-pomodoro).
+
+<p align="center"><img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/footers/gray0_ctp_on_line.svg?sanitize=true" /></p>
