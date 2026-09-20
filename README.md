@@ -15,7 +15,7 @@ Every theme uses the shell script [switcher](./themes/switcher) to switch betwee
 > [!DANGER]
 > If you want to change more files with the theme, add them in both (or more) theme folders. Otherwise, the script will break the files and mess with the application.
 
-### Custom applcations
+### Custom apps
 This folder is used to store pre-compiled applications file that are necessery for the good look of the overall theme.
 All credit goes to the original authors of the applications, I just compiled them for my personal use and for the use of the themes.
 
